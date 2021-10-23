@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TestTask_4A_MVC.Models.Book>
+@{
+    //ViewData["Title"] = "Список смартфонов";
+    Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Библиотека</title>
+</head>
+<body>
+<h3>Книги</h3>
+<table>
+    <tr>
+        <td>Название</td>
+        <td>Издатель</td>
+        <td>Автор</td>
+        <td>Дата публикования</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var book in Model)
+    {
+    <tr>
+        <td>@book.Title</td>
+        <td>@book.Publisher</td>
+        <td>@book.Author</td>
+        <td>@book.DatePublished</td>
+        <td>@book.Price</td>
+        <td><a href="~/Home/Buy/@book.Id">Прочитать</a></td>
+    </tr>
+    }
+</table>
+</body>
+</html>
