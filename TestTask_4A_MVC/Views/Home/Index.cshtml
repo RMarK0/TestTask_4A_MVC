@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<TestTask_4A_MVC.Models.Book>
 @{
-    //ViewData["Title"] = "Список смартфонов";
-    Layout = null;
+    ViewData["Title"] = "Каталог товаров";
 }
 <!DOCTYPE html>
  
@@ -11,7 +10,7 @@
 </head>
 <body>
 <h3>Книги</h3>
-<table>
+<table class="table-condensed">
     <tr>
         <td>Название</td>
         <td>Издатель</td>
@@ -22,14 +21,14 @@
     </tr>
     @foreach (var book in Model)
     {
-    <tr>
-        <td>@book.Title</td>
-        <td>@book.Publisher</td>
-        <td>@book.Author</td>
-        <td>@book.DatePublished</td>
-        <td>@book.Price</td>
-        <td><a href="~/Home/Buy/@book.Id">Прочитать</a></td>
-    </tr>
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Publisher</td>
+            <td>@book.Author</td>
+            <td>@book.DatePublished.ToShortDateString()</td>
+            <td>@book.Price</td>
+            <td><a href="~/Home/Read/@book.Id">Прочитать</a></td>
+        </tr>
     }
 </table>
 </body>

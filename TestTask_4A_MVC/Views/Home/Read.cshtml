@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Оформление заявки";
+}
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление заявки</title>
+</head>
+<body>
+<div>
+    <h3>Форма оформления заявки</h3>
+    <p>Для оформления заявки заполните следующие поля:</p>
+    <form method="post" class="form-horizontal" role="form">
+        <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+        <p>Для оформления заявки заполните следующие поля:</p>
+        <div class="form-group">
+            <label for="User" class="col-md-2 control-label">Имя:</label>
+            <div class="col-md-4">
+                <input type="text" name="User" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Отправить" />
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
