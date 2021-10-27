@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TestTask_4A_MVC.Models.Book>
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+<div>
+    <h3>Форма добавления книги в библиотеку</h3>
+    <form method="post" class="form-horizontal" role="form">
+        <p>Для добавления книги заполните следующие поля:</p>
+        <div class="form-group">
+            <label for="User" class="col-md-2 control-label">Имя:</label>
+            <div class="col-md-4">
+                <input type="text" name="Title" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="User" class="col-md-2 control-label">Издатель:</label>
+            <div class="col-md-4">
+                <input type="text" name="Publisher" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="User" class="col-md-2 control-label">Автор:</label>
+            <div class="col-md-4">
+                <input type="text" name="Author" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="User" class="col-md-2 control-label">Цена:</label>
+            <div class="col-md-4">
+                <input type="text" name="Price" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Отправить" />
+            </div>
+        </div>
+    </form>
+
+</div>
