@@ -10,26 +10,26 @@
 </head>
 <body>
 <h3>Книги</h3>
-<a href="~/Home/Add">Добавить книгу</a>
+<a style="padding: 5px" href="~/Home/Add">Добавить книгу</a>
+<a style="padding: 5px" href="~/Home/ClearDB">Очистить базу книг</a>
+<a style="padding: 5px" href="~/Home/ExportToXML">Экспортировать базу в XML</a>
 
 <table class="table-condensed">
     <tr>
-        <td>Название</td>
-        <td>Издатель</td>
-        <td>Автор</td>
-        <td>Дата публикования</td>
-        <td>Цена</td>
-        <td></td>
+        <td style="padding: 5px">Название</td>
+        <td style="padding: 5px">Автор</td>
+        <td style="padding: 5px">Цена</td>
+        <td style="padding: 5px"></td>
     </tr>
     @foreach (var book in Model)
     {
         <tr>
-            <td>@book.Title</td>
-            <td>@book.Publisher</td>
-            <td>@book.Author</td>
-            <td>@book.DatePublished.ToShortDateString()</td>
-            <td>@book.Price</td>
-            <td><a href="~/Home/Read/@book.Id">Прочитать</a></td>
+            <td style="padding: 5px">@book.Title</td>
+            <td style="padding: 5px">@book.Author</td>
+            <td style="padding: 5px">@book.Price</td>
+            <td style="padding: 5px"><a href="~/Home/Delete/@book.Id">Удалить книгу</a></td>
+            <td style="padding: 5px"><a href="~/Home/Details/@book.Id">Информация о книге</a></td>
+            <td style="padding: 5px"><a href="~/Home/Edit/@book.Id">Редактировать информацию</a></td>
         </tr>
     }
 </table>

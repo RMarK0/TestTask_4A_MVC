@@ -1,0 +1,32 @@
+﻿@model TestTask_4A_MVC.Models.Book
+@{
+    ViewData["Title"] = $"Details about {Model.Title}";
+}
+
+<h1>Информация о книге @Model.Title</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Просмотр информации о книге</title>
+</head>
+<body>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Идентификатор</dt>
+        <dd>@Model.Id</dd>
+
+        <dt>Название</dt>
+        <dd>@Model.Title</dd>
+
+        <dt>Дата добавления</dt>
+        <dd>@Model.DatePublished</dd>
+
+        <dt>Издатель</dt>
+        <dd>@Model.Publisher</dd>
+
+        <dt>Цена</dt>
+        <dd>@Model.Price ₽</dd>
+    </dl>
+</div>
+</body>
+</html>

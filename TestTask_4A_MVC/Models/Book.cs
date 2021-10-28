@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace TestTask_4A_MVC.Models
 {
+    [Serializable]
     public class Book
     {
         public int Id { get; set; }

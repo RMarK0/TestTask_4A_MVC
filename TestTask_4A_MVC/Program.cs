@@ -23,6 +23,7 @@ namespace TestTask_4A_MVC
                 try
                 {
                     var context = services.GetRequiredService<BookContext>();
+
                     SampleData.Initialize(context);
                 }
                 catch (Exception ex)

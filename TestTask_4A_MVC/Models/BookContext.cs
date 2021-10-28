@@ -16,5 +16,10 @@ namespace TestTask_4A_MVC.Models
             Database.EnsureCreated();
         }
 
+        public IQueryable<Book> GetBooks()
+        {
+            return Books;
+        }
+
     }
 }
