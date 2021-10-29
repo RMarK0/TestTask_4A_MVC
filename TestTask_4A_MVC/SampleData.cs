@@ -6,8 +6,15 @@ using TestTask_4A_MVC.Models;
 
 namespace TestTask_4A_MVC
 {
+    /// <summary>
+    /// Класс, отвечающий за заполнение базы данных тестовыми данными
+    /// </summary>
     public class SampleData
     {
+        /// <summary>
+        /// Метод, заполняющий базу Books тестовыми данными
+        /// </summary>
+        /// <param name="context">Контекст данных, содержащий в себе базу данных</param>
         public static void Initialize(BookContext context)
         {
             if (!context.Books.Any())

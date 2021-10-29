@@ -13,6 +13,9 @@ using TestTask_4A_MVC.Models;
 
 namespace TestTask_4A_MVC
 {
+    /// <summary>
+    /// Класс, отвечающий за стартовую конфигурацию приложения
+    /// </summary>
     public class Startup
     {
         public Startup(IConfiguration configuration)
