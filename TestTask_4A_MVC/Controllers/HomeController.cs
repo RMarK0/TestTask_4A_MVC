@@ -77,6 +77,7 @@ namespace TestTask_4A_MVC.Controllers
             return NotFound();
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id != null)
@@ -90,7 +91,6 @@ namespace TestTask_4A_MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Book book)
         {
-            book.DatePublished = DateTime.Now;
             db.Books.Update(book);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

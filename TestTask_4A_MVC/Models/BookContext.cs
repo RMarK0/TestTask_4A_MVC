@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TestTask_4A_MVC.Models
 {
-    public class BookContext : DbContext
+    public sealed class BookContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Request> Requests { get; set; }
